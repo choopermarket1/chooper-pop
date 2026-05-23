@@ -714,6 +714,19 @@ section { padding: 120px 0; }
 }
 .medal:hover .m-wreath { transform: rotate(-8deg) scale(1.12); opacity: 1; }
 
+/* 빈티지 메달 일러스트 — 카드 중앙에 큰 사이즈 */
+.m-badge {
+  display: block;
+  width: 110px;
+  height: auto;
+  margin: 0 auto -8px;
+  filter: drop-shadow(0 6px 12px rgba(74, 20, 25, .25));
+  transition: transform .5s var(--ease);
+  z-index: 2;
+  position: relative;
+}
+.medal:hover .m-badge { transform: translateY(-4px) rotate(-3deg) scale(1.06); }
+
 .medal-1 { background: var(--champagne-soft); }
 .medal-2 { background: var(--cream); }
 .medal-3 { background: var(--sage-soft); }

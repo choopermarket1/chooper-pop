@@ -203,30 +203,33 @@
 
     <div class="medals">
       <div class="medal medal-1">
-        <svg class="m-wreath" viewBox="0 0 100 100" aria-hidden="true">
+        <svg class="m-badge" viewBox="0 0 120 140" aria-hidden="true">
+          <!-- 메달 본체 (그라데이션) -->
           <defs>
-            <g id="leaf-r">
-              <path d="M0 0 Q4 -3 7 0 Q4 3 0 0" fill="currentColor" opacity=".85"/>
-            </g>
+            <radialGradient id="g1" cx="50%" cy="40%">
+              <stop offset="0%" stop-color="#E8C77A"/>
+              <stop offset="60%" stop-color="#B89366"/>
+              <stop offset="100%" stop-color="#7A5C2F"/>
+            </radialGradient>
           </defs>
-          <!-- 좌측 월계관 -->
-          <g transform="translate(28 50)">
-            <path d="M0 -22 Q-10 -10 -4 8" stroke="currentColor" stroke-width="1" fill="none"/>
-            <use href="#leaf-r" transform="translate(-2 -18) rotate(-30)"/>
-            <use href="#leaf-r" transform="translate(-5 -10) rotate(-20)"/>
-            <use href="#leaf-r" transform="translate(-7 -2) rotate(-10)"/>
-            <use href="#leaf-r" transform="translate(-7 6) rotate(0)"/>
+          <!-- 리본 -->
+          <path d="M40 0 L60 36 L80 0 Z" fill="#6B2329"/>
+          <path d="M44 0 L60 30 L76 0 Z" fill="#4A1419"/>
+          <!-- 동전 -->
+          <circle cx="60" cy="86" r="44" fill="url(#g1)" stroke="#4A1419" stroke-width="2"/>
+          <circle cx="60" cy="86" r="38" fill="none" stroke="#4A1419" stroke-width="0.8" opacity=".5"/>
+          <!-- 월계관 -->
+          <g stroke="#4A1419" stroke-width="0.8" fill="#4A1419" opacity=".55">
+            <ellipse cx="32" cy="86" rx="3.5" ry="2" transform="rotate(-30 32 86)"/>
+            <ellipse cx="30" cy="74" rx="3.5" ry="2" transform="rotate(-50 30 74)"/>
+            <ellipse cx="34" cy="100" rx="3.5" ry="2" transform="rotate(-10 34 100)"/>
+            <ellipse cx="88" cy="86" rx="3.5" ry="2" transform="rotate(30 88 86)"/>
+            <ellipse cx="90" cy="74" rx="3.5" ry="2" transform="rotate(50 90 74)"/>
+            <ellipse cx="86" cy="100" rx="3.5" ry="2" transform="rotate(10 86 100)"/>
           </g>
-          <!-- 우측 월계관 (미러) -->
-          <g transform="translate(72 50) scale(-1 1)">
-            <path d="M0 -22 Q-10 -10 -4 8" stroke="currentColor" stroke-width="1" fill="none"/>
-            <use href="#leaf-r" transform="translate(-2 -18) rotate(-30)"/>
-            <use href="#leaf-r" transform="translate(-5 -10) rotate(-20)"/>
-            <use href="#leaf-r" transform="translate(-7 -2) rotate(-10)"/>
-            <use href="#leaf-r" transform="translate(-7 6) rotate(0)"/>
-          </g>
-          <!-- 중앙 별 -->
-          <text x="50" y="55" text-anchor="middle" font-family="serif" font-size="22" fill="currentColor" font-weight="bold">★</text>
+          <text x="60" y="80" text-anchor="middle" font-family="Playfair Display, serif" font-size="11" font-weight="900" letter-spacing="1" fill="#4A1419">WORLD</text>
+          <text x="60" y="96" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" font-weight="900" font-style="italic" fill="#4A1419">N°1</text>
+          <text x="60" y="110" text-anchor="middle" font-family="serif" font-size="6" letter-spacing="1.2" fill="#4A1419">MMXXIV</text>
         </svg>
         <span class="m-sparkle">✦</span>
         <span class="m-yr">MMXXIV</span>
@@ -234,12 +237,22 @@
         <span class="m-name">World Drinks Awards</span>
       </div>
       <div class="medal medal-2">
-        <svg class="m-wreath" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="50" cy="50" r="17" fill="none" stroke="currentColor" stroke-width="0.6"/>
-          <text x="50" y="46" text-anchor="middle" font-family="serif" font-size="8" letter-spacing="1.4" fill="currentColor" font-weight="bold">GOLD</text>
-          <text x="50" y="58" text-anchor="middle" font-family="serif" font-size="5" letter-spacing="1.2" fill="currentColor">MMXXVI</text>
-          <text x="50" y="68" text-anchor="middle" font-size="9" fill="currentColor">✦</text>
+        <svg class="m-badge" viewBox="0 0 120 140" aria-hidden="true">
+          <defs>
+            <radialGradient id="g2" cx="50%" cy="40%">
+              <stop offset="0%" stop-color="#F5D88A"/>
+              <stop offset="50%" stop-color="#C9A961"/>
+              <stop offset="100%" stop-color="#8A6E2E"/>
+            </radialGradient>
+          </defs>
+          <path d="M40 0 L60 36 L80 0 Z" fill="#6B2329"/>
+          <path d="M44 0 L60 30 L76 0 Z" fill="#4A1419"/>
+          <circle cx="60" cy="86" r="44" fill="url(#g2)" stroke="#4A1419" stroke-width="2"/>
+          <circle cx="60" cy="86" r="38" fill="none" stroke="#4A1419" stroke-width="0.8" opacity=".4"/>
+          <circle cx="60" cy="86" r="32" fill="none" stroke="#4A1419" stroke-width="0.5" opacity=".3"/>
+          <text x="60" y="78" text-anchor="middle" font-family="serif" font-size="6" letter-spacing="1.4" fill="#4A1419">MONDE SELECTION</text>
+          <text x="60" y="98" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" font-weight="900" letter-spacing="1.5" fill="#4A1419">GOLD</text>
+          <text x="60" y="110" text-anchor="middle" font-family="serif" font-size="6" letter-spacing="1.2" fill="#4A1419">MMXXVI</text>
         </svg>
         <span class="m-sparkle">✦</span>
         <span class="m-yr">MMXXVI</span>
@@ -253,9 +266,21 @@
         <span class="m-name">Global Low &amp; No Wine Masters</span>
       </div>
       <div class="medal medal-4">
-        <svg class="m-wreath" viewBox="0 0 100 100" aria-hidden="true">
-          <path d="M50 26 L56 42 L74 42 L60 52 L66 70 L50 60 L34 70 L40 52 L26 42 L44 42 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-          <text x="50" y="84" text-anchor="middle" font-family="serif" font-size="6" letter-spacing="1.2" fill="currentColor">TDB · 2024</text>
+        <svg class="m-badge" viewBox="0 0 120 140" aria-hidden="true">
+          <defs>
+            <radialGradient id="g4" cx="50%" cy="40%">
+              <stop offset="0%" stop-color="#E8E0D0"/>
+              <stop offset="55%" stop-color="#B0A88E"/>
+              <stop offset="100%" stop-color="#6F6750"/>
+            </radialGradient>
+          </defs>
+          <path d="M40 0 L60 36 L80 0 Z" fill="#6B2329"/>
+          <path d="M44 0 L60 30 L76 0 Z" fill="#4A1419"/>
+          <circle cx="60" cy="86" r="44" fill="url(#g4)" stroke="#4A1419" stroke-width="2"/>
+          <circle cx="60" cy="86" r="38" fill="none" stroke="#4A1419" stroke-width="0.8" opacity=".5"/>
+          <!-- 5각별 -->
+          <path d="M60 64 L65 78 L80 78 L68 87 L73 102 L60 93 L47 102 L52 87 L40 78 L55 78 Z" fill="#4A1419" opacity=".8"/>
+          <text x="60" y="116" text-anchor="middle" font-family="serif" font-size="6" letter-spacing="1.4" fill="#4A1419" font-weight="bold">SILVER · TDB</text>
         </svg>
         <span class="m-sparkle">✦</span>
         <span class="m-yr">MMXXIV</span>
