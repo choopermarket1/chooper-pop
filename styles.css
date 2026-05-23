@@ -685,20 +685,20 @@ section { padding: 120px 0; }
   50%      { opacity: 1;  transform: translateX(-50%) scale(1.15) rotate(15deg); }
 }
 
-/* 실제 수상 로고 이미지 — 마크 우상단 오버레이 */
+/* 실제 수상 로고 이미지 — 카드 중앙에 큰 사이즈 */
 .medal-with-logo .m-logo {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 56px;
-  height: 56px;
+  display: block;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
+  margin: 12px auto 8px;
   z-index: 2;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .15));
-  transition: transform .4s var(--ease);
+  position: relative;
+  filter: drop-shadow(0 4px 10px rgba(74, 20, 25, .2));
+  transition: transform .5s var(--ease);
 }
-.medal-with-logo:hover .m-logo { transform: scale(1.15) rotate(-6deg); }
-.medal-with-logo .m-yr { margin-top: 6px; }
+.medal-with-logo:hover .m-logo { transform: rotate(-6deg) scale(1.12); }
+.medal-with-logo .m-yr { margin-top: 4px; }
 
 /* SVG 빈티지 메달 마크 — 로고 없는 카드용 */
 .m-wreath {
