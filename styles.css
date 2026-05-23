@@ -825,8 +825,11 @@ section { padding: 120px 0; }
 }
 .prod:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.04); }
 /* Petite 사이즈만 살짝 작게 — 750→375 시각 구분 */
-.prod-bottle-img.mini { height: 64%; max-width: 50%; }
+.prod-bottle-img.mini { height: 60%; max-width: 46%; }
 .prod-rose-mini:hover .prod-bottle-img.mini { transform: translate(-50%, -54%) scale(1.04); }
+/* 750ml 큰 병 — 카드를 거의 꽉 채우는 느낌 */
+.prod-large .prod-bottle-img { height: 96%; max-width: 80%; }
+.prod-large:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.05); }
 
 .prod-art {
   aspect-ratio: 3 / 4.2;       /* 더 길게 — 음료 사이즈 큼 */
