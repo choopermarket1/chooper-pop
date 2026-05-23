@@ -696,6 +696,8 @@ section { padding: 120px 0; }
   position: relative;
   filter: drop-shadow(0 4px 10px rgba(74, 20, 25, .2));
   transition: transform .5s var(--ease);
+  /* PNG 흰 여백을 카드 배경에 자연스럽게 녹임 */
+  mix-blend-mode: multiply;
 }
 .medal-with-logo:hover .m-logo { transform: rotate(-6deg) scale(1.12); }
 .medal-with-logo .m-yr { margin-top: 4px; }
