@@ -883,8 +883,8 @@ section { padding: 120px 0; }
 }
 .prod-rose-mini .prod-bottle-img {
   transform: translate(-50%, -50%);
-  height: 80%;          /* Petite는 살짝 작게 */
-  max-width: 60%;
+  height: 58%;          /* N°02 PNG 안 병이 다른 PNG보다 커서 더 줄임 */
+  max-width: 45%;
 }
 .prod-bubbly .prod-bottle-img {
   transform: translate(-50%, -50%);
