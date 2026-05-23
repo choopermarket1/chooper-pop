@@ -14,6 +14,19 @@
 </head>
 <body>
 
+<!-- SVG filter — 메달 PNG 흰 배경 → 투명 처리 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="kill-white" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+       -1 -1 -1 3 0"/>
+    </filter>
+  </defs>
+</svg>
+
 <!-- ─────────── NAV ─────────── -->
 <header class="nav">
   <a href="#" class="brand">
@@ -450,7 +463,7 @@
     <div class="cta-marquee"><span class="gold-rule light"></span>&nbsp;<i>Coffret Dégustation</i>&nbsp;<span class="gold-rule light"></span></div>
     <h2 class="cta-h">
       지금 시음을<br>
-      <em>받아보세요.</em>
+      <em>해보세요.</em>
     </h2>
     <p class="cta-sub">
       샤인 로제 · 버블리 샹그리아 · 선셋 스프리츠<br>
