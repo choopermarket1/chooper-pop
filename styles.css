@@ -298,22 +298,43 @@ img { display: block; max-width: 100%; }
   background: var(--bordeaux);
   color: var(--paper);
   font-family: var(--kr);
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.12em;
-  padding: 19px 40px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  padding: 20px 44px;
   border-radius: 0;
   border: 1px solid var(--bordeaux);
   box-shadow:
     0 0 0 1px var(--bordeaux),
     inset 0 0 0 4px var(--bordeaux),
     inset 0 0 0 5px var(--champagne),
-    6px 6px 0 var(--champagne);
+    6px 6px 0 var(--champagne),
+    0 0 0 0 rgba(184, 147, 102, .55);
   outline: 1px solid var(--champagne);
   outline-offset: 4px;
   transition: background .25s var(--ease), color .25s var(--ease), transform .2s var(--ease), box-shadow .2s var(--ease);
   cursor: pointer;
+  animation: btn-pulse 2.6s ease-in-out infinite;
 }
+@keyframes btn-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px var(--bordeaux),
+      inset 0 0 0 4px var(--bordeaux),
+      inset 0 0 0 5px var(--champagne),
+      6px 6px 0 var(--champagne),
+      0 0 0 0 rgba(184, 147, 102, .55);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px var(--bordeaux),
+      inset 0 0 0 4px var(--bordeaux),
+      inset 0 0 0 5px var(--champagne),
+      6px 6px 0 var(--champagne),
+      0 0 0 14px rgba(184, 147, 102, 0);
+  }
+}
+.btn-primary:hover { animation: none; }
 .btn-primary:hover {
   background: var(--noir);
   color: var(--champagne);
@@ -679,6 +700,20 @@ section { padding: 120px 0; }
 .medal-with-logo:hover .m-logo { transform: scale(1.15) rotate(-6deg); }
 .medal-with-logo .m-yr { margin-top: 6px; }
 
+/* SVG 빈티지 메달 마크 — 로고 없는 카드용 */
+.m-wreath {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 64px;
+  height: 64px;
+  color: var(--bordeaux);
+  opacity: .8;
+  z-index: 2;
+  transition: transform .5s var(--ease), opacity .3s;
+}
+.medal:hover .m-wreath { transform: rotate(-8deg) scale(1.12); opacity: 1; }
+
 .medal-1 { background: var(--champagne-soft); }
 .medal-2 { background: var(--cream); }
 .medal-3 { background: var(--sage-soft); }
@@ -688,10 +723,10 @@ section { padding: 120px 0; }
 .m-yr {
   font-family: var(--display);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 13px;
-  letter-spacing: 0.16em;
-  color: var(--ink-soft);
+  letter-spacing: 0.18em;
+  color: var(--bordeaux);
   margin-top: 18px;
 }
 .m-rank {
@@ -714,10 +749,11 @@ section { padding: 120px 0; }
   font-family: var(--italic);
   font-style: normal;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--ink-soft);
+  font-weight: 600;
+  color: var(--bordeaux);
   line-height: 1.4;
   padding: 0 8px;
+  opacity: .85;
 }
 
 /* ─────────── PRODUCTS ─────────── */
@@ -803,7 +839,7 @@ section { padding: 120px 0; }
 }
 .prod-bottle.mini { transform: scale(0.7); transform-origin: center bottom; }
 
-/* 누끼 보틀 이미지 — 모든 카드에서 동일 높이로 정규화 */
+/* 누끼 보틀 이미지 — 5장 모두 동일한 시각 사이즈로 정규화 */
 .prod-art {
   position: relative;
 }
@@ -812,24 +848,44 @@ section { padding: 120px 0; }
   z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 86%;        /* art panel 높이 86%로 통일 */
+  height: 82%;
   width: auto;
-  max-width: 70%;
+  max-width: 80%;
   object-fit: contain;
   display: block;
   filter:
     drop-shadow(4px 8px 12px rgba(26, 15, 10, .35))
     drop-shadow(0 2px 4px rgba(26, 15, 10, .25));
   transition: transform .6s var(--ease);
+  /* 기본 transform — 각 PNG별로 아래에서 scale 보정 */
+  transform: translate(-50%, -50%);
 }
-.prod:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.04); }
-/* Petite 사이즈만 살짝 작게 — 750→375 시각 구분 */
-.prod-bottle-img.mini { height: 60%; max-width: 46%; }
-.prod-rose-mini:hover .prod-bottle-img.mini { transform: translate(-50%, -54%) scale(1.04); }
-/* 750ml 큰 병 — 카드를 거의 꽉 채우는 느낌 */
-.prod-large .prod-bottle-img { height: 96%; max-width: 80%; }
-.prod-large:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.05); }
+/* PNG별 시각 사이즈 보정 — 안에 든 병 비율이 다르므로 scale로 정규화 */
+.prod-rose .prod-bottle-img,
+.prod-rose-mini .prod-bottle-img,
+.prod-large .prod-bottle-img {
+  transform: translate(-50%, -50%) scale(1.0);
+  height: 86%;
+  max-width: 60%;
+}
+.prod-bubbly .prod-bottle-img {
+  transform: translate(-50%, -50%) scale(2.5);  /* 정사각 PNG 안 작은 병 → 시각적으로 확대 */
+  height: 86%;
+}
+.prod-spritz .prod-bottle-img {
+  transform: translate(-50%, -50%) scale(2.4);  /* 정사각 PNG */
+  height: 86%;
+}
+.prod-mulled .prod-bottle-img {
+  transform: translate(-50%, -50%) scale(1.2);   /* 세로 PNG, 안 병 크지만 더 키움 */
+  height: 86%;
+}
+/* 호버 효과 — 모든 카드 동일하게 살짝 위로 떠오름 */
+.prod:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.0); }
+.prod-bubbly:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(2.6); }
+.prod-spritz:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(2.5); }
+.prod-mulled:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.25); }
+.prod-bottle-img.mini { /* Petite도 동일 사이즈 — 라벨로만 구분 */ }
 
 .prod-art {
   aspect-ratio: 3 / 4.2;       /* 더 길게 — 음료 사이즈 큼 */
@@ -1381,22 +1437,23 @@ section { padding: 120px 0; }
   margin: 0 0 32px;
   font-family: var(--kr);
   font-size: 14px;
-  color: var(--ink-soft);
+  color: var(--ink);
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 .hero-wit i {
   font-family: var(--italic);
   font-style: normal;
-  color: var(--terracotta);
+  color: var(--bordeaux);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 .wit-rule {
   display: inline-block;
   width: 36px;
-  height: 1px;
-  background: var(--champagne);
+  height: 2px;
+  background: var(--terracotta);
 }
 
 /* Hero Photo · 우측 사진 with 럭셔리 보정 */
