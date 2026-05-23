@@ -873,32 +873,37 @@ section { padding: 120px 0; }
   /* 기본 transform — 각 PNG별로 아래에서 scale 보정 */
   transform: translate(-50%, -50%);
 }
-/* PNG별 시각 사이즈 보정 — 안에 든 병 비율이 다르므로 scale로 정규화 */
+/* PNG별 시각 사이즈 보정 — chooper-b2b의 Drive 호스팅 PNG 비율에 맞춰 normalize */
+/* 기준: 모든 카드 안 병이 약 80% height 시각 사이즈로 보이게 */
 .prod-rose .prod-bottle-img,
-.prod-rose-mini .prod-bottle-img,
 .prod-large .prod-bottle-img {
-  transform: translate(-50%, -50%) scale(1.0);
-  height: 86%;
+  transform: translate(-50%, -50%);
+  height: 94%;
+  max-width: 85%;
+}
+.prod-rose-mini .prod-bottle-img {
+  transform: translate(-50%, -50%);
+  height: 80%;          /* Petite는 살짝 작게 */
   max-width: 60%;
 }
 .prod-bubbly .prod-bottle-img {
-  transform: translate(-50%, -50%) scale(2.5);  /* 정사각 PNG 안 작은 병 → 시각적으로 확대 */
-  height: 86%;
+  transform: translate(-50%, -50%);
+  height: 94%;
+  max-width: 85%;
 }
 .prod-spritz .prod-bottle-img {
-  transform: translate(-50%, -50%) scale(2.4);  /* 정사각 PNG */
-  height: 86%;
+  transform: translate(-50%, -50%);
+  height: 94%;
+  max-width: 85%;
 }
 .prod-mulled .prod-bottle-img {
-  transform: translate(-50%, -50%) scale(1.2);   /* 세로 PNG, 안 병 크지만 더 키움 */
-  height: 86%;
+  transform: translate(-50%, -50%);
+  height: 94%;
+  max-width: 70%;
 }
-/* 호버 효과 — 모든 카드 동일하게 살짝 위로 떠오름 */
-.prod:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.0); }
-.prod-bubbly:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(2.6); }
-.prod-spritz:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(2.5); }
-.prod-mulled:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.25); }
-.prod-bottle-img.mini { /* Petite도 동일 사이즈 — 라벨로만 구분 */ }
+/* 호버 효과 — 모든 카드 동일하게 살짝 위로 떠오름 + 살짝 확대 */
+.prod:hover .prod-bottle-img { transform: translate(-50%, -54%) scale(1.04); }
+.prod-bottle-img.mini { /* Petite는 위 .prod-rose-mini 셀렉터에서 사이즈 작게 */ }
 
 .prod-art {
   aspect-ratio: 3 / 4.2;       /* 더 길게 — 음료 사이즈 큼 */
@@ -1538,9 +1543,18 @@ section { padding: 120px 0; }
 }
 .hero-tab:hover { color: var(--bordeaux); background: rgba(184, 147, 102, .08); }
 .hero-tab.active {
-  color: var(--bordeaux);
-  border-bottom-color: var(--champagne);
   font-weight: 600;
+  border-bottom-width: 3px;
+}
+.hero-tab[data-video="rose"].active {
+  color: var(--rose-poudre);
+  border-bottom-color: var(--rose-poudre);
+  background: linear-gradient(180deg, rgba(232, 155, 159, .08), transparent);
+}
+.hero-tab[data-video="bubbly"].active {
+  color: var(--terracotta);
+  border-bottom-color: var(--champagne);
+  background: linear-gradient(180deg, rgba(184, 147, 102, .1), transparent);
 }
 .hero-photo:hover .hero-photo-inner img { transform: scale(1.03); }
 /* 워밍 톤 오버레이 + 비네팅 */
