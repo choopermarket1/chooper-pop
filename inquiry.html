@@ -7,7 +7,7 @@
 <meta name="description" content="3종 × 1병 무료 샘플. 영업일 1~2일 내 발송." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&family=Inter:wght@600;800;900&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&family=Pretendard:wght@300;400;500;600;700;900&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="inquiry.css">
 </head>
@@ -16,135 +16,168 @@
 <!-- NAV -->
 <header class="nav">
   <a href="index.html" class="brand">
-    <span class="brand-emoji">🍷</span>
     <span class="brand-name">CHOOPER</span>
-    <span class="brand-tag">맨정신 클럽</span>
+    <span class="brand-divider"></span>
+    <span class="brand-tag"><i>Maison de Vin</i> · MMXXIV</span>
   </a>
   <nav class="nav-links">
-    <a href="index.html">← 홈으로</a>
+    <a href="index.html">← Retour</a>
   </nav>
 </header>
 
 <!-- HEADER -->
 <section class="inq-hero">
   <div class="container">
-    <span class="hero-badge">FREE SAMPLE BOX 🎁</span>
+    <div class="hero-presenting">
+      <span class="gold-rule"></span>
+      <span><i>Coffret Dégustation</i> &nbsp;·&nbsp; 무료 시음</span>
+      <span class="gold-rule"></span>
+    </div>
     <h1 class="hero-h1">
-      샘플 한 박스,<br>
-      <span class="hl-pink">공짜로 보내드려요.</span>
+      지금 시음을<br>
+      <em>받아보세요.</em>
     </h1>
     <p class="hero-sub">
-      샤인 로제 · 버블리 샹그리아 · 선셋 스프리츠 — <b>3종 × 1병씩</b>.<br>
-      제품 카탈로그 + 단가표 동봉. 영업일 <b>1~2일 내 발송</b>.
+      <i>Shine Rosé · Bubbly Sangria · Sunset Spritz</i><br>
+      <b>3종 × 1병 무료</b> · 제품 카탈로그 · 단가표 동봉<br>
+      문의 접수 후 영업일 <b>1~2일 내</b> 발송됩니다.
     </p>
   </div>
 </section>
 
 <!-- FORM -->
 <section class="inq-form-wrap">
-  <form class="inq-form" onsubmit="event.preventDefault(); document.getElementById('thanks').scrollIntoView({behavior:'smooth'});">
+  <form class="inq-form" action="https://formsubmit.co/sweetyworld0404@gmail.com" method="POST">
+
+    <!-- FormSubmit 메타 설정 -->
+    <input type="hidden" name="_subject" value="[Maison Chooper] B2B 시음 신청">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://localhost:3459/inquiry.html#thanks">
+    <input type="hidden" name="_autoresponse" value="문의 감사합니다. Maison Chooper 담당자가 영업일 1~2일 내 회신드립니다. — CHOOPER COMPANY">
 
     <!-- 1. 사업자 정보 -->
     <div class="fset">
-      <span class="fset-num">01</span>
-      <h3 class="fset-h">사업자 정보 <span class="fset-tag">🏢</span></h3>
+      <span class="fset-num">I.</span>
+      <h3 class="fset-h">사업자 정보 <span class="fset-sub"><i>Maison</i></span></h3>
 
       <div class="frow">
         <label>
           <span>회사 / 매장명 <i>*</i></span>
-          <input type="text" placeholder="예: 시그니엘 서울" required />
+          <input type="text" name="회사_매장명" placeholder="예: 시그니엘 서울" required />
         </label>
         <label>
           <span>사업자등록번호 <i>*</i></span>
-          <input type="text" placeholder="000-00-00000" required />
+          <input type="text" name="사업자등록번호" placeholder="000-00-00000" required />
         </label>
       </div>
 
       <div class="frow">
         <label>
           <span>업종</span>
-          <select>
+          <select name="업종">
             <option>선택해주세요</option>
-            <option>🏨 5성 호텔</option>
-            <option>💍 웨딩 / 컨벤션</option>
-            <option>🍽️ 파인 다이닝</option>
-            <option>🤱 산후 케어</option>
-            <option>🎨 갤러리</option>
-            <option>🛍️ 백화점 / MD</option>
-            <option>🍸 와인 바</option>
-            <option>☕ 프리미엄 카페</option>
+            <option>5성 호텔</option>
+            <option>웨딩 / 컨벤션</option>
+            <option>파인 다이닝</option>
+            <option>산후 케어 · 산후조리원</option>
+            <option>갤러리 · 전시</option>
+            <option>백화점 / MD</option>
+            <option>와인 바</option>
+            <option>프리미엄 카페</option>
+            <option>리조트 · 호스피탈리티</option>
             <option>기타</option>
           </select>
         </label>
         <label>
           <span>지역</span>
-          <input type="text" placeholder="시·도 / 구·군" />
+          <input type="text" name="지역" placeholder="시·도 / 구·군" />
         </label>
       </div>
     </div>
 
     <!-- 2. 담당자 -->
     <div class="fset">
-      <span class="fset-num">02</span>
-      <h3 class="fset-h">담당자 <span class="fset-tag">👤</span></h3>
+      <span class="fset-num">II.</span>
+      <h3 class="fset-h">담당자 <span class="fset-sub"><i>Contact</i></span></h3>
 
       <div class="frow">
         <label>
           <span>담당자명 <i>*</i></span>
-          <input type="text" placeholder="홍길동" required />
+          <input type="text" name="담당자명" placeholder="홍길동" required />
         </label>
         <label>
           <span>직책</span>
-          <input type="text" placeholder="대표 · F&B 매니저 등" />
+          <input type="text" name="직책" placeholder="대표 · F&B 매니저 등" />
         </label>
       </div>
 
       <div class="frow">
         <label>
           <span>이메일 <i>*</i></span>
-          <input type="email" placeholder="hello@chooper.kr" required />
+          <input type="email" name="email" placeholder="hello@chooper.kr" required />
         </label>
         <label>
           <span>연락처 <i>*</i></span>
-          <input type="tel" placeholder="010-0000-0000" required />
+          <input type="tel" name="연락처" placeholder="010-0000-0000" required />
         </label>
       </div>
     </div>
 
     <!-- 3. 예상 수량 -->
     <div class="fset">
-      <span class="fset-num">03</span>
-      <h3 class="fset-h">예상 발주 물량 <span class="fset-tag">📦</span></h3>
-      <p class="fset-help">대략으로 입력하셔도 돼요. 즉시 자동 견적이 표시됩니다.</p>
+      <span class="fset-num">III.</span>
+      <h3 class="fset-h">예상 발주 물량 <span class="fset-sub"><i>La Commande</i></span></h3>
+      <p class="fset-help">대략으로 입력하셔도 됩니다. 즉시 자동 견적이 표시됩니다.</p>
 
       <div class="qty-grid">
         <label class="qty-cell qty-rose">
           <span class="qty-head">
-            <span class="qty-emoji">🌹</span>
-            <span class="qty-name">샤인 로제</span>
+            <span class="qty-num">N° 01 · 750ml</span>
+            <span class="qty-name">Shine Rosé<br><i>샤인 로제 750</i></span>
           </span>
           <span class="qty-row">
-            <input type="number" min="0" value="0" inputmode="numeric" />
+            <input type="number" name="샤인로제_750ml_병" min="0" value="0" inputmode="numeric" data-price="18000" />
+            <span class="qty-unit">병</span>
+          </span>
+        </label>
+        <label class="qty-cell qty-rose-mini">
+          <span class="qty-head">
+            <span class="qty-num">N° 02 · 375ml</span>
+            <span class="qty-name">Shine Rosé<br><i>샤인 로제 375</i></span>
+          </span>
+          <span class="qty-row">
+            <input type="number" name="샤인로제_375ml_병" min="0" value="0" inputmode="numeric" data-price="11000" />
             <span class="qty-unit">병</span>
           </span>
         </label>
         <label class="qty-cell qty-bubbly">
           <span class="qty-head">
-            <span class="qty-emoji">🍓</span>
-            <span class="qty-name">버블리 샹그리아</span>
+            <span class="qty-num">N° 03 · 750ml</span>
+            <span class="qty-name">Bubbly Sangria<br><i>버블리 샹그리아</i></span>
           </span>
           <span class="qty-row">
-            <input type="number" min="0" value="0" inputmode="numeric" />
+            <input type="number" name="버블리샹그리아_병" min="0" value="0" inputmode="numeric" data-price="18000" />
             <span class="qty-unit">병</span>
           </span>
         </label>
         <label class="qty-cell qty-spritz">
           <span class="qty-head">
-            <span class="qty-emoji">🍊</span>
-            <span class="qty-name">선셋 스프리츠</span>
+            <span class="qty-num">N° 04 · 750ml</span>
+            <span class="qty-name">Sunset Spritz<br><i>선셋 스프리츠</i></span>
           </span>
           <span class="qty-row">
-            <input type="number" min="0" value="0" inputmode="numeric" />
+            <input type="number" name="선셋스프리츠_병" min="0" value="0" inputmode="numeric" data-price="18000" />
+            <span class="qty-unit">병</span>
+          </span>
+        </label>
+        <label class="qty-cell qty-mulled">
+          <span class="qty-head">
+            <span class="qty-num">N° 05 · 750ml</span>
+            <span class="qty-name">Goyo Vin Chaud<br><i>고요한 뱅쇼</i></span>
+          </span>
+          <span class="qty-row">
+            <input type="number" name="고요한뱅쇼_병" min="0" value="0" inputmode="numeric" data-price="19000" />
             <span class="qty-unit">병</span>
           </span>
         </label>
@@ -153,34 +186,35 @@
       <div class="frow">
         <label>
           <span>희망 납기일</span>
-          <input type="date" />
+          <input type="date" name="희망납기일" />
         </label>
         <label>
           <span>추가 메모</span>
-          <input type="text" placeholder="예: 결혼식용, 라벨 커스텀 가능?" />
+          <input type="text" name="추가메모" placeholder="예: 결혼식용, 라벨 커스텀 가능?" />
         </label>
       </div>
     </div>
 
     <!-- 자동 견적 -->
     <div class="estimate">
-      <span class="est-kicker">즉시 자동 견적 💰</span>
+      <span class="est-kicker"><i>Devis Automatique</i> · 즉시 견적</span>
       <div class="est-row">
-        <span class="est-label">예상 견적</span>
+        <span class="est-label">Total estimé</span>
         <span class="est-val">— 원</span>
       </div>
-      <p class="est-note">정확한 견적은 담당자가 1영업일 내 회신드립니다.</p>
+      <input type="hidden" name="자동견적_원" value="0">
+      <p class="est-note">제출하시면 메일로 자동 견적이 송부됩니다.</p>
     </div>
 
     <!-- 동의 -->
     <label class="consent">
-      <input type="checkbox" required />
-      <span>개인정보 수집·이용에 동의합니다. (샘플 발송·견적 회신 목적)</span>
+      <input type="checkbox" name="개인정보_동의" value="동의" required />
+      <span>개인정보 수집·이용에 동의합니다. <i>(샘플 발송·견적 회신 목적)</i></span>
     </label>
 
     <!-- 제출 -->
     <button type="submit" class="btn-big inq-submit">
-      샘플 신청하기 →
+      시음 신청하기 &nbsp;→
     </button>
 
   </form>
@@ -189,36 +223,42 @@
 <!-- THANKS -->
 <section id="thanks" class="thanks">
   <div class="container thanks-inner">
-    <span class="thanks-emoji">🎉</span>
+    <div class="chapter-mark"><span class="gold-rule"></span><span><i>Merci</i></span><span class="gold-rule"></span></div>
     <h2 class="h2">
-      신청 <span class="hl-pink">완료!</span>
+      신청이 <em>접수되었습니다.</em>
     </h2>
     <p class="hero-sub">
       영업일 <b>1~2일 내</b> 담당자가 회신드립니다.<br>
-      샘플 박스는 <b>3~5일</b> 안에 도착해요. 🚚
+      샘플 박스는 <b>3~5일</b> 안에 도착합니다.
     </p>
-    <a href="index.html" class="btn-primary">← 홈으로</a>
+    <a href="index.html" class="btn-primary">← 홈으로 돌아가기</a>
   </div>
 </section>
 
 <footer class="footer">
   <div class="foot-bottom">
-    <span>© 2026 CHOOPER COMPANY · ALL RIGHTS RESERVED</span>
-    <span>🍷 0.0% · 100%</span>
+    <span>© MMXXVI CHOOPER COMPANY &nbsp;·&nbsp; All Rights Reserved</span>
+    <span>0.0% Alcool &nbsp;·&nbsp; 100% Vin</span>
   </div>
 </footer>
 
 <script>
-  // 자동 견적: 병당 18000원 (기준가)
-  const PRICE = 18000;
-  const inputs = document.querySelectorAll('.qty-cell input');
+  // 자동 견적 · 상품별 단가는 data-price 속성에서 읽음
+  const qtyInputs = document.querySelectorAll('.qty-cell input[type="number"]');
   const out = document.querySelector('.est-val');
+  const hiddenEst = document.querySelector('input[name="자동견적_원"]');
   function recalc() {
     let sum = 0;
-    inputs.forEach(i => { sum += (parseInt(i.value, 10) || 0) * PRICE; });
-    out.textContent = sum > 0 ? sum.toLocaleString('ko-KR') + ' 원' : '— 원';
+    qtyInputs.forEach(i => {
+      const qty = parseInt(i.value, 10) || 0;
+      const price = parseInt(i.dataset.price, 10) || 18000;
+      sum += qty * price;
+    });
+    const formatted = sum > 0 ? sum.toLocaleString('ko-KR') + ' 원' : '— 원';
+    if (out) out.textContent = formatted;
+    if (hiddenEst) hiddenEst.value = sum.toLocaleString('ko-KR') + ' 원';
   }
-  inputs.forEach(i => i.addEventListener('input', recalc));
+  qtyInputs.forEach(i => i.addEventListener('input', recalc));
 </script>
 </body>
 </html>

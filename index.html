@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>츄퍼 · 맨정신 와인 클럽 🍷 — B2B</title>
-<meta name="description" content="0.0% 알코올, 100% 와인. 숙취 없는 디너의 시작. 호텔·웨딩·다이닝·산후·카페 B2B 공급." />
-<meta property="og:title" content="츄퍼 · 맨정신 와인 클럽" />
-<meta property="og:description" content="와인은 마시고 싶고 / 내일은 멀쩡하고 싶다." />
+<title>CHOOPER · 음료가 아니라, 진짜 와인입니다 — B2B</title>
+<meta name="description" content="고객이 다시 찾는 논알콜 와인. 테이블 위의 분위기, 고객의 재방문, 새로운 매출까지. 호텔·다이닝·카페·리조트 B2B 공급." />
+<meta property="og:title" content="CHOOPER · Maison de Vin" />
+<meta property="og:description" content="음료가 아니라, 진짜 와인입니다." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&family=Inter:wght@600;800;900&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&family=Pretendard:wght@300;400;500;600;700;900&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,16 +17,16 @@
 <!-- ─────────── NAV ─────────── -->
 <header class="nav">
   <a href="#" class="brand">
-    <span class="brand-emoji">🍷</span>
     <span class="brand-name">CHOOPER</span>
-    <span class="brand-tag">맨정신 클럽</span>
+    <span class="brand-divider"></span>
+    <span class="brand-tag"><i>Maison de Vin</i> · MMXXIV</span>
   </a>
   <nav class="nav-links">
-    <a href="#why">왜?</a>
-    <a href="#awards">상</a>
-    <a href="#products">제품</a>
-    <a href="#use">쓰임</a>
-    <a href="inquiry.html" class="nav-cta">샘플 받기 →</a>
+    <a href="#why">Le Vin</a>
+    <a href="#awards">Les Médailles</a>
+    <a href="#products">La Collection</a>
+    <a href="#use">Les Maisons</a>
+    <a href="inquiry.html" class="nav-cta">시음 신청</a>
   </nav>
 </header>
 
@@ -39,136 +39,192 @@
   </div>
 
   <div class="hero-inner">
-    <span class="hero-badge">2024 WORLD DRINKS AWARDS · WORLD N°1 🥇</span>
+    <div class="hero-presenting">
+      <span class="gold-rule"></span>
+      <span><i>Maison Chooper</i> &nbsp;·&nbsp; Depuis MMXXIV</span>
+      <span class="gold-rule"></span>
+    </div>
 
-    <h1 class="hero-h1">
-      와인은 마시고 싶고<br>
-      <span class="strike">내일은 멀쩡</span><span class="hl-mustard">내일도 멀쩡</span><br>
-      하고 싶다.
-    </h1>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-h1">
+          음료가 아니라,<br>
+          <em>진짜 와인</em><span class="kr-up">입니다.</span>
+        </h1>
 
-    <p class="hero-sub">
-      0.0% 알코올, 100% 와인 맛.<br>
-      <b>숙취 없는 디너의 시작</b>을 츄퍼가 만들었어요.
-    </p>
+        <p class="hero-sub">
+          <i>Le vin véritable — sans alcool.</i>
+          테이블 위의 분위기, 고객의 재방문, 새로운 매출까지.
+          <b>고객이 다시 찾는 논알콜 와인</b>을 츄퍼가 만들었습니다.
+        </p>
 
-    <div class="hero-cta">
-      <a href="inquiry.html" class="btn-primary">샘플 무료로 받기 →</a>
-      <a href="#why" class="btn-ghost">근데 진짜 와인 맛이야? 🤨</a>
+        <div class="hero-wit">
+          <span class="wit-rule"></span>
+          <span><i>Sans alcool, sans regret —</i> 후회 없는 한 잔.</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="inquiry.html" class="btn-primary">무료 시음 신청 &nbsp;→</a>
+          <a href="#why" class="btn-ghost">제품 자세히 보기</a>
+        </div>
+      </div>
+
+      <figure class="hero-photo">
+        <div class="hero-tabs">
+          <button class="hero-tab active" data-video="rose" type="button">Shine Rosé</button>
+          <button class="hero-tab" data-video="bubbly" type="button">Bubbly Sangria</button>
+        </div>
+        <div class="hero-photo-inner">
+          <video id="vid-rose" class="hero-vid active" src="video/shine-rose.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video id="vid-bubbly" class="hero-vid" src="video/bubbly.mp4" loop muted playsinline preload="metadata"></video>
+        </div>
+        <figcaption><span id="hero-caption-name"><i>Shine Rosé</i></span> &nbsp;—&nbsp; <span id="hero-caption-award">World N°1 · MMXXIV</span></figcaption>
+      </figure>
     </div>
 
     <div class="hero-tickers">
-      <div class="tk"><b>0.0<i>%</i></b><span>알코올</span></div>
-      <div class="tk"><b>27</b><span>레시피 반복</span></div>
-      <div class="tk"><b>5</b><span>국제 메달</span></div>
-      <div class="tk"><b>100<i>+</i></b><span>거래처</span></div>
+      <div class="tk"><b>27</b><span>Recettes · 레시피</span></div>
+      <div class="tk"><b>5</b><span>Médailles · 수상</span></div>
+      <div class="tk"><b>100<i>+</i></b><span>Maisons · 거래처</span></div>
+      <div class="tk"><b>0.0<i>%</i></b><span>Alcool · 알코올</span></div>
     </div>
   </div>
 </section>
 
-<!-- ─────────── 굴러가는 마퀴 ─────────── -->
+<!-- ─────────── MARQUEE ─────────── -->
 <section class="marquee" aria-hidden="true">
   <div class="m-track">
-    <span>🥇 WORLD DRINKS AWARDS</span>
-    <span>✦</span>
-    <span>🥈 MONDE SELECTION GOLD</span>
-    <span>✦</span>
-    <span>🥉 IWSC BRONZE 2024</span>
-    <span>✦</span>
-    <span>🍷 100+ 호텔·다이닝 거래</span>
-    <span>✦</span>
-    <span>😎 운전해도 됨</span>
-    <span>✦</span>
-    <span>🤰 임산부 OK</span>
-    <span>✦</span>
-    <span>🌅 내일 멀쩡함</span>
-    <span>✦</span>
+    <span><i>World Drinks Awards</i> · MMXXIV</span>
+    <span class="m-dot">✦</span>
+    <span><i>Monde Selection</i> · Gold</span>
+    <span class="m-dot">✦</span>
+    <span><i>IWSC</i> · International Wine & Spirit Competition</span>
+    <span class="m-dot">✦</span>
+    <span><i>World Beverage Innovation Awards</i></span>
+    <span class="m-dot">✦</span>
+    <span>100+ Hôtels &amp; Maisons</span>
+    <span class="m-dot">✦</span>
   </div>
 </section>
 
 <!-- ─────────── WHY ─────────── -->
 <section id="why" class="why">
   <div class="container">
-    <span class="kicker">왜 츄퍼?</span>
+    <div class="chapter-mark"><span class="gold-rule"></span><span>Chapitre I &nbsp;·&nbsp; <i>Le Vin</i></span><span class="gold-rule"></span></div>
     <h2 class="h2">
-      그냥 <span class="hl-pink">'논알콜'</span>이 아니라,<br>
-      <em>진짜 와인</em>이라서.
+      와인의 풍미, 그 하나만을 위해<br>
+      <em>27번</em> 레시피를 변경했습니다.
     </h2>
+    <p class="lede">
+      논알콜 와인은 '맛이 빠진 와인'이 아닙니다.<br>
+      츄퍼는 진짜 와인을 만들고, 알코올만 빼냅니다.
+    </p>
 
     <div class="why-grid">
       <div class="card card-pink">
-        <span class="card-emoji">🍷</span>
-        <h3>와인 맛 그대로</h3>
-        <p>스페인 포도밭에서 따와서, 한국에서 진공 증류.<br>폴리페놀·탄닌·향미 다 살아있어요.</p>
-        <span class="card-tag">27 RECIPES</span>
+        <span class="card-num">I.</span>
+        <h3>자체 R&amp;D 연구소</h3>
+        <p>스페인 산지에서 직접 수급한 와인 원액을, 한국 자체 연구소에서 27회 시제품을 거쳐 풍미를 설계합니다.</p>
+        <span class="card-tag">In-House R&amp;D</span>
       </div>
 
-      <div class="card card-olive">
-        <span class="card-emoji">🚗</span>
-        <h3>운전해도 됨</h3>
-        <p>0.0% 알코올, 음주측정기에 안 잡힘.<br>회식 끝나고 차 몰고 집 가도 OK.</p>
-        <span class="card-tag">0.0% ABV</span>
+      <div class="card card-olive card-tech">
+        <span class="card-num">II.</span>
+        <svg class="tech-diagram" viewBox="0 0 200 140" aria-hidden="true">
+          <!-- 와인 탱크 -->
+          <rect x="6" y="92" width="36" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="24" y="138" text-anchor="middle" font-size="7" letter-spacing="1.6" fill="currentColor">VIN</text>
+          <!-- 입력 라인 -->
+          <path d="M42 108 L74 108" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polygon points="74,105 78,108 74,111" fill="currentColor"/>
+          <!-- 증류 컬럼 (다단) -->
+          <rect x="80" y="14" width="40" height="112" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="80" y1="32" x2="120" y2="32" stroke="currentColor" stroke-width="0.8"/>
+          <line x1="80" y1="50" x2="120" y2="50" stroke="currentColor" stroke-width="0.8"/>
+          <line x1="80" y1="68" x2="120" y2="68" stroke="currentColor" stroke-width="0.8"/>
+          <line x1="80" y1="86" x2="120" y2="86" stroke="currentColor" stroke-width="0.8"/>
+          <line x1="80" y1="104" x2="120" y2="104" stroke="currentColor" stroke-width="0.8"/>
+          <!-- 단별 점 (다단 표시) -->
+          <circle cx="100" cy="32" r="1.5" fill="currentColor"/>
+          <circle cx="100" cy="50" r="1.5" fill="currentColor"/>
+          <circle cx="100" cy="68" r="1.5" fill="currentColor"/>
+          <circle cx="100" cy="86" r="1.5" fill="currentColor"/>
+          <circle cx="100" cy="104" r="1.5" fill="currentColor"/>
+          <!-- 환류 화살표 (위로) -->
+          <path d="M70 50 L70 30 Q70 24 76 24 L80 24" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+          <polygon points="80,21 84,24 80,27" fill="currentColor"/>
+          <text x="64" y="62" font-size="6" fill="currentColor" letter-spacing="1">REFLUX</text>
+          <!-- 상단 알코올 배출 -->
+          <path d="M100 14 L100 6 L150 6 L150 30" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polygon points="147,30 150,34 153,30" fill="currentColor"/>
+          <text x="150" y="44" text-anchor="middle" font-size="7" letter-spacing="1.6" fill="currentColor">ALCOOL</text>
+          <text x="150" y="52" text-anchor="middle" font-size="5" letter-spacing="0.6" opacity="0.7" fill="currentColor">분리 ↑</text>
+          <!-- 하단 풍미 보존 출력 -->
+          <path d="M120 110 L160 110 L160 92" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polygon points="157,92 160,86 163,92" fill="currentColor"/>
+          <rect x="142" y="68" width="36" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="160" y="82" text-anchor="middle" font-size="6" fill="currentColor" letter-spacing="0.4">CHOOPER</text>
+          <text x="160" y="124" text-anchor="middle" font-size="5" letter-spacing="0.6" opacity="0.7" fill="currentColor">풍미 보존</text>
+        </svg>
+        <h3>다단환류 증류법</h3>
+        <p>저온·다단환류 증류로 알코올만 정밀 분리. 폴리페놀·탄닌·아로마를 그대로 보존하는 츄퍼만의 방식입니다.</p>
+        <span class="card-tag">Multi-Stage Reflux</span>
       </div>
 
       <div class="card card-mustard">
-        <span class="card-emoji">🤰</span>
-        <h3>임산부도 OK</h3>
-        <p>산후조리원·웨딩 토스트·태교 디너까지.<br>"오늘은 한 잔 못 마시지" 옛말.</p>
-        <span class="card-tag">FAMILY SAFE</span>
+        <span class="card-num">III.</span>
+        <h3>진짜 와인 베이스</h3>
+        <p>인공 향료가 아닌 진짜 와인이 베이스. 그래서 와인을 아는 셰프·소믈리에가 먼저 선택합니다.</p>
+        <span class="card-tag">Real Wine Base</span>
       </div>
 
       <div class="card card-cream">
-        <span class="card-emoji">🌅</span>
-        <h3>내일 멀쩡함</h3>
-        <p>숙취 0. 두통 0. 후회 0.<br>월요일 회의에 멀쩡하게 출근.</p>
-        <span class="card-tag">NO HANGOVER</span>
+        <span class="card-num">IV.</span>
+        <h3>0.0% 알코올</h3>
+        <p>음주측정기에 잡히지 않는 진짜 0.0%. 운전·임산부·산후·태교까지 안심하고 권할 수 있습니다.</p>
+        <span class="card-tag">Zero · 0.0% ABV</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─────────── 메달 ─────────── -->
+<!-- ─────────── AWARDS ─────────── -->
 <section id="awards" class="awards">
   <div class="container">
-    <span class="kicker">세계가 인정함</span>
+    <div class="chapter-mark"><span class="gold-rule"></span><span>Chapitre II &nbsp;·&nbsp; <i>Les Médailles</i></span><span class="gold-rule"></span></div>
     <h2 class="h2">
-      <span class="hl-mustard">알콜 와인이랑</span> 같이 심사받아서<br>
-      메달 <em>다섯 개</em>.
+      이 맛, <em>세계 1위</em>로<br>
+      검증되었습니다.
     </h2>
     <p class="lede">
-      논알콜끼리만 겨룬 게 아니에요.<br>
-      진짜 와인들 사이에서 받아온 상장이에요. 🏆
+      논알콜끼리 겨룬 결과가 아닙니다.<br>
+      <i>진짜 알코올 와인들 사이에서</i> 받아온 5개의 국제 수상입니다.
     </p>
 
     <div class="medals">
       <div class="medal medal-1">
-        <span class="m-yr">2024</span>
-        <span class="m-emoji">🥇</span>
-        <span class="m-rank">WORLD N°1</span>
+        <span class="m-yr">MMXXIV</span>
+        <span class="m-rank">World <i>N°1</i></span>
         <span class="m-name">World Drinks Awards</span>
       </div>
       <div class="medal medal-2">
-        <span class="m-yr">2026</span>
-        <span class="m-emoji">🏅</span>
-        <span class="m-rank">GOLD</span>
+        <span class="m-yr">MMXXVI</span>
+        <span class="m-rank">Gold</span>
         <span class="m-name">Monde Selection</span>
       </div>
       <div class="medal medal-3">
-        <span class="m-yr">2024</span>
-        <span class="m-emoji">🥈</span>
-        <span class="m-rank">SILVER</span>
-        <span class="m-name">Global Low & No Wine Masters</span>
+        <span class="m-yr">MMXXIV</span>
+        <span class="m-rank">Silver</span>
+        <span class="m-name">Global Low &amp; No Wine Masters</span>
       </div>
       <div class="medal medal-4">
-        <span class="m-yr">2024</span>
-        <span class="m-emoji">🥈</span>
-        <span class="m-rank">SILVER</span>
+        <span class="m-yr">MMXXIV</span>
+        <span class="m-rank">Silver</span>
         <span class="m-name">The Drinks Business</span>
       </div>
       <div class="medal medal-5">
-        <span class="m-yr">2024</span>
-        <span class="m-emoji">🥉</span>
-        <span class="m-rank">BRONZE</span>
+        <span class="m-yr">MMXXIV</span>
+        <span class="m-rank">Bronze</span>
         <span class="m-name">IWSC</span>
       </div>
     </div>
@@ -178,135 +234,225 @@
 <!-- ─────────── COLLECTION ─────────── -->
 <section id="products" class="products">
   <div class="container">
-    <span class="kicker">컬렉션</span>
+    <div class="chapter-mark"><span class="gold-rule"></span><span>Chapitre III &nbsp;·&nbsp; <i>La Collection</i></span><span class="gold-rule"></span></div>
     <h2 class="h2">
-      세 가지 맛.<br>
-      <span class="hl-pink">셋 다 0.0%.</span>
+      다섯 가지 풍미.<br>
+      <em>모두 0.0%.</em>
     </h2>
 
     <div class="prod-grid">
       <article class="prod prod-rose">
         <div class="prod-art">
-          <span class="prod-emoji">🌹</span>
-          <span class="prod-num">N°01</span>
+          <span class="prod-num">N° 01</span>
+          <img class="prod-bottle-img" src="img/products/shine-rose-375.png" alt="Shine Rosé 375ml" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="prod-bottle" style="display:none"></span>
+          <span class="prod-vol">375 ml</span>
         </div>
         <div class="prod-body">
-          <span class="prod-line">샤인 로제</span>
+          <span class="prod-line">— Édition I —</span>
           <h3>Shine Rosé</h3>
-          <p>복숭아 향, 산뜻한 탄산.<br>스페인 레드 와인의 탄닌, 깔끔한 피니쉬.</p>
-          <span class="prod-tag">🥇 WORLD N°1</span>
+          <p class="prod-kr">샤인 로제 · 375ml</p>
+          <p>복숭아 향과 산뜻한 탄산. 스페인 레드 와인의 부드러운 탄닌, 깔끔하게 떨어지는 피니쉬.</p>
+          <span class="prod-tag">World N°1 · MMXXIV</span>
+        </div>
+      </article>
+
+      <article class="prod prod-rose-mini">
+        <div class="prod-art">
+          <span class="prod-num">N° 02</span>
+          <img class="prod-bottle-img mini" src="img/products/shine-rose-375.png" alt="Shine Rosé Petite" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="prod-bottle mini" style="display:none"></span>
+          <span class="prod-vol">Petite</span>
+        </div>
+        <div class="prod-body">
+          <span class="prod-line">— Édition I · Petite —</span>
+          <h3>Shine Rosé</h3>
+          <p class="prod-kr">샤인 로제 · Petite</p>
+          <p>1인 디너·산후·태교 케어용 미니 사이즈. 같은 풍미, 부담 없는 한 잔.</p>
+          <span class="prod-tag">Petite · Édition I</span>
         </div>
       </article>
 
       <article class="prod prod-bubbly">
         <div class="prod-art">
-          <span class="prod-emoji">🍓</span>
-          <span class="prod-num">N°02</span>
+          <span class="prod-num">N° 03</span>
+          <img class="prod-bottle-img" src="img/products/bubbly-sangria.png" alt="Bubbly Sangria" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="prod-bottle" style="display:none"></span>
+          <span class="prod-vol">750 ml</span>
         </div>
         <div class="prod-body">
-          <span class="prod-line">버블리 샹그리아</span>
+          <span class="prod-line">— Édition II —</span>
           <h3>Bubbly Sangria</h3>
-          <p>딸기 + 오렌지 + 라임.<br>여름 디너 파티에 한 잔, 두 잔, 세 잔.</p>
-          <span class="prod-tag">🏅 GOLD</span>
+          <p class="prod-kr">버블리 샹그리아 · 750ml</p>
+          <p>딸기·오렌지·라임이 어우러진 여름 디너용 한 잔. 산뜻하고 화려한 식전주.</p>
+          <span class="prod-tag">Gold · Monde Selection</span>
         </div>
       </article>
 
       <article class="prod prod-spritz">
         <div class="prod-art">
-          <span class="prod-emoji">🍊</span>
-          <span class="prod-num">N°03</span>
+          <span class="prod-num">N° 04</span>
+          <img class="prod-bottle-img" src="img/products/sunset-spritz.png" alt="Sunset Spritz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="prod-bottle" style="display:none"></span>
+          <span class="prod-vol">750 ml</span>
         </div>
         <div class="prod-body">
-          <span class="prod-line">선셋 스프리츠</span>
+          <span class="prod-line">— Édition III —</span>
           <h3>Sunset Spritz</h3>
-          <p>비터스윗 자몽, 화이트 와인 바디.<br>해 질 녘 테라스용 한 잔.</p>
-          <span class="prod-tag">🥈 SILVER</span>
+          <p class="prod-kr">선셋 스프리츠 · 750ml</p>
+          <p>비터스윗 자몽 향과 화이트 와인 바디. 해 질 녘 테라스를 위한 가볍고 산뜻한 한 잔.</p>
+          <span class="prod-tag">Silver · IWSC</span>
+        </div>
+      </article>
+
+      <article class="prod prod-mulled">
+        <div class="prod-art">
+          <span class="prod-num">N° 05</span>
+          <img class="prod-bottle-img" src="img/products/goyo-vin-chaud.png" alt="고요한 뱅쇼" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="prod-bottle" style="display:none"></span>
+          <span class="prod-vol">750 ml</span>
+        </div>
+        <div class="prod-body">
+          <span class="prod-line">— Édition IV · Hiver —</span>
+          <h3>Goyo Vin Chaud</h3>
+          <p class="prod-kr">고요한 뱅쇼 · 750ml</p>
+          <p>시나몬·오렌지필·정향을 데운 겨울의 한 잔. 데우면 풍미가 살아나는 윈터 레시피.</p>
+          <span class="prod-tag">Winter Edition</span>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ─────────── 어디에 쓰이나 ─────────── -->
+<!-- ─────────── USE ─────────── -->
 <section id="use" class="use">
   <div class="container">
-    <span class="kicker">어디에 쓰이나</span>
+    <div class="chapter-mark light"><span class="gold-rule light"></span><span>Chapitre IV &nbsp;·&nbsp; <i>Les Maisons</i></span><span class="gold-rule light"></span></div>
     <h2 class="h2">
-      <em>"술 못 마시는데"</em><br>
-      그 손님들, <span class="hl-olive">다 츄퍼로.</span>
+      이미 전국 호텔·다이닝·카페가<br>
+      <em>츄퍼를 선택했습니다.</em>
     </h2>
+    <p class="lede light">
+      <i>"술을 못 마시는 손님"</i>은 더 이상 매출의 끝이 아닙니다.<br>
+      츄퍼 한 병이 분위기와 객단가를 동시에 올립니다.
+    </p>
 
     <div class="use-grid">
-      <div class="use-cell">
-        <span class="use-emoji">🏨</span>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=85&auto=format&fit=crop" alt="5성 호텔" loading="lazy" /></div>
+        <span class="use-num">i.</span>
         <span class="use-title">5성 호텔</span>
-        <span class="use-sub">미니바 · 연회</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">💍</span>
-        <span class="use-title">웨딩</span>
-        <span class="use-sub">토스트 · 답례품</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">🍽️</span>
+        <span class="use-sub">Mini-Bar · Banquet</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=85&auto=format&fit=crop" alt="웨딩" loading="lazy" /></div>
+        <span class="use-num">ii.</span>
+        <span class="use-title">웨딩 컨벤션</span>
+        <span class="use-sub">Toast · Bonbonnière</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=85&auto=format&fit=crop" alt="파인 다이닝" loading="lazy" /></div>
+        <span class="use-num">iii.</span>
         <span class="use-title">파인 다이닝</span>
-        <span class="use-sub">와인 페어링</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">🤱</span>
-        <span class="use-title">산후 케어</span>
-        <span class="use-sub">프리미엄 케어</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">🎨</span>
-        <span class="use-title">갤러리</span>
-        <span class="use-sub">오프닝 리셉션</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">🛍️</span>
-        <span class="use-title">백화점</span>
-        <span class="use-sub">프리미엄 진열</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">🍸</span>
+        <span class="use-sub">Wine Pairing</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=85&auto=format&fit=crop" alt="산후 케어" loading="lazy" /></div>
+        <span class="use-num">iv.</span>
+        <span class="use-title">산후·태교</span>
+        <span class="use-sub">Maternity Care</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=85&auto=format&fit=crop" alt="갤러리" loading="lazy" /></div>
+        <span class="use-num">v.</span>
+        <span class="use-title">갤러리·전시</span>
+        <span class="use-sub">Vernissage</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=85&auto=format&fit=crop" alt="백화점" loading="lazy" /></div>
+        <span class="use-num">vi.</span>
+        <span class="use-title">백화점 MD</span>
+        <span class="use-sub">Premium Retail</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=85&auto=format&fit=crop" alt="와인 바" loading="lazy" /></div>
+        <span class="use-num">vii.</span>
         <span class="use-title">와인 바</span>
-        <span class="use-sub">NA 프로그램</span>
-      </div>
-      <div class="use-cell">
-        <span class="use-emoji">☕</span>
+        <span class="use-sub">N/A Program</span>
+      </figure>
+      <figure class="use-cell">
+        <div class="use-photo"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=85&auto=format&fit=crop" alt="프리미엄 카페" loading="lazy" /></div>
+        <span class="use-num">viii.</span>
         <span class="use-title">프리미엄 카페</span>
-        <span class="use-sub">시그니처</span>
-      </div>
+        <span class="use-sub">Signature Menu</span>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ─────────── 한 줄 일화 ─────────── -->
-<section class="quote">
-  <div class="container quote-inner">
-    <span class="q-mark">"</span>
-    <p class="q-text">
-      한 셰프가 블라인드로 테이스팅 해봤는데<br>
-      <em>"이게 진짜 논알콜이라고?"</em>라면서<br>
-      그날 와인 리스트에 그냥 올려버렸어요.
-    </p>
-    <span class="q-author">— 강남 한 다이닝 헤드 셰프</span>
+<!-- ─────────── GALLERY ─────────── -->
+<section class="gallery">
+  <div class="container">
+    <div class="chapter-mark"><span class="gold-rule"></span><span>Intermède &nbsp;·&nbsp; <i>L'Atmosphère</i></span><span class="gold-rule"></span></div>
+    <h2 class="h2">
+      한 병으로 바뀌는<br>
+      <em>분위기 한 단계.</em>
+    </h2>
+
+    <div class="gal-grid">
+      <figure class="gal-cell gal-tall">
+        <img src="https://images.unsplash.com/photo-1543699565-003b8adda5fc?w=1000&q=88&auto=format&fit=crop" alt="와인 푸어" loading="lazy" />
+        <figcaption><i>La Verse</i> · 와인 푸어</figcaption>
+      </figure>
+      <figure class="gal-cell">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=900&q=88&auto=format&fit=crop" alt="와인 잔 클로즈업" loading="lazy" />
+        <figcaption><i>La Coupe</i> · 글래스 클로즈업</figcaption>
+      </figure>
+      <figure class="gal-cell">
+        <img src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?w=900&q=88&auto=format&fit=crop" alt="시그니처 칵테일" loading="lazy" />
+        <figcaption><i>Le Cocktail</i> · 시그니처 한 잔</figcaption>
+      </figure>
+      <figure class="gal-cell gal-wide gal-video">
+        <video src="video/bubbly.mp4" autoplay loop muted playsinline preload="metadata"></video>
+        <figcaption><i>Bubbly Sangria</i> · 영상으로 보는 한 잔</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
-<!-- ─────────── 큰 CTA ─────────── -->
+<!-- ─────────── QUOTE ─────────── -->
+<section class="quote">
+  <div class="quote-bg" aria-hidden="true">
+    <video src="video/brand-story.mp4" autoplay loop muted playsinline preload="metadata"
+           poster="https://images.unsplash.com/photo-1543699565-003b8adda5fc?w=1600&q=85&auto=format&fit=crop"></video>
+  </div>
+  <div class="container quote-inner">
+    <div class="q-frame">
+      <span class="q-mark">"</span>
+      <p class="q-text">
+        한 셰프가 블라인드 테이스팅을 해보더니<br>
+        <em>"이게 진짜 논알콜이라고?"</em>라며<br>
+        그날 와인 리스트에 그대로 올렸습니다.
+      </p>
+      <span class="q-author"><span class="ornament">✦</span> 강남 한 파인다이닝 헤드 셰프 <span class="ornament">✦</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CTA ─────────── -->
 <section class="cta">
   <div class="container cta-inner">
+    <div class="cta-marquee"><span class="gold-rule light"></span>&nbsp;<i>Coffret Dégustation</i>&nbsp;<span class="gold-rule light"></span></div>
     <h2 class="cta-h">
-      샘플 한 박스,<br>
-      <span class="hl-pink">공짜로 보내드려요.</span>
+      지금 시음을<br>
+      <em>받아보세요.</em>
     </h2>
     <p class="cta-sub">
-      3종 × 1병씩 + 제품 카탈로그.<br>
-      문의 접수 후 영업일 1~2일 내 발송.
+      샤인 로제 · 버블리 샹그리아 · 선셋 스프리츠<br>
+      <b>3종 × 1병 무료</b> · 제품 카탈로그 · 단가표 동봉
     </p>
-    <a href="inquiry.html" class="btn-big">샘플 신청하러 가기 →</a>
-    <p class="cta-foot">📞 02-1234-5678 · 📧 b2b@chooper.kr</p>
+    <a href="inquiry.html" class="btn-big">무료 시음 신청 &nbsp;→</a>
+    <p class="cta-foot">+82 2 1234 5678 &nbsp;·&nbsp; b2b@chooper.kr</p>
   </div>
 </section>
 
@@ -314,34 +460,66 @@
 <footer class="footer">
   <div class="container foot-grid">
     <div>
-      <span class="brand-emoji">🍷</span>
       <span class="brand-name">CHOOPER</span>
-      <p class="foot-tag">맨정신 와인 클럽 · Real Wine, 0.0% Alcohol</p>
+      <p class="foot-tag"><i>Maison de Vin</i> &nbsp;·&nbsp; Depuis MMXXIV<br>음료가 아니라, 진짜 와인입니다.</p>
     </div>
     <div class="foot-col">
-      <h4>제품</h4>
-      <a href="#products">샤인 로제</a>
-      <a href="#products">버블리 샹그리아</a>
-      <a href="#products">선셋 스프리츠</a>
+      <h4>La Collection</h4>
+      <a href="#products">Shine Rosé</a>
+      <a href="#products">Bubbly Sangria</a>
+      <a href="#products">Sunset Spritz</a>
     </div>
     <div class="foot-col">
-      <h4>비즈니스</h4>
-      <a href="inquiry.html">B2B 문의</a>
+      <h4>Business</h4>
+      <a href="inquiry.html">B2B 시음 신청</a>
       <a href="#use">유통 채널</a>
-      <a href="#awards">수상 내역</a>
+      <a href="#awards">국제 수상</a>
     </div>
     <div class="foot-col">
-      <h4>연락</h4>
+      <h4>Contact</h4>
       <a href="mailto:b2b@chooper.kr">b2b@chooper.kr</a>
-      <a href="tel:02-1234-5678">02-1234-5678</a>
-      <span class="foot-meta">서울특별시 · CHOOPER COMPANY</span>
+      <a href="tel:02-1234-5678">+82 2 1234 5678</a>
+      <span class="foot-meta">Seoul · Chooper Company</span>
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 CHOOPER COMPANY · ALL RIGHTS RESERVED</span>
-    <span>🍷 0.0% · 100%</span>
+    <span>© MMXXVI CHOOPER COMPANY &nbsp;·&nbsp; All Rights Reserved</span>
+    <span>0.0% Alcool &nbsp;·&nbsp; 100% Vin</span>
   </div>
 </footer>
 
+<script>
+  // Hero 영상 토글 — Shine Rosé / Bubbly Sangria
+  (function(){
+    const tabs = document.querySelectorAll('.hero-tab');
+    const vids = {
+      rose:   document.getElementById('vid-rose'),
+      bubbly: document.getElementById('vid-bubbly')
+    };
+    const captionName = {
+      rose:   '<i>Shine Rosé</i>',
+      bubbly: '<i>Bubbly Sangria</i>'
+    };
+    const captionAward = {
+      rose:   'World N°1 · MMXXIV',
+      bubbly: 'Gold · Monde Selection'
+    };
+    const nameEl  = document.getElementById('hero-caption-name');
+    const awardEl = document.getElementById('hero-caption-award');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const key = tab.dataset.video;
+        tabs.forEach(t => t.classList.toggle('active', t === tab));
+        Object.entries(vids).forEach(([k, v]) => {
+          if (!v) return;
+          if (k === key) { v.classList.add('active'); v.currentTime = 0; v.play().catch(()=>{}); }
+          else { v.classList.remove('active'); v.pause(); }
+        });
+        if (nameEl)  nameEl.innerHTML  = captionName[key];
+        if (awardEl) awardEl.textContent = captionAward[key];
+      });
+    });
+  })();
+</script>
 </body>
 </html>
