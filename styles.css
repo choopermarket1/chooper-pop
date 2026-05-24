@@ -240,14 +240,13 @@ img { display: block; max-width: 100%; }
 
 .hero-h1 {
   font-family: var(--kr-serif);
-  font-size: clamp(30px, 3.8vw, 56px);
+  font-size: clamp(28px, 3.2vw, 48px);
   font-weight: 600;
   line-height: 1.32;
   letter-spacing: -0.028em;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: var(--bordeaux);
   word-break: keep-all;
-  white-space: nowrap;
 }
 .hero-h1 em {
   font-family: var(--kr-serif);
@@ -1438,8 +1437,8 @@ section { padding: 120px 0; }
    ═══════════════════════════════════════════════ */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1.3fr;     /* 영상 영역 40% → 57% (43% 증가) */
+  gap: 56px;
   align-items: center;
   margin-bottom: 72px;
   text-align: left;
@@ -1494,7 +1493,7 @@ section { padding: 120px 0; }
 .hero-photo-inner {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 4.6;            /* 살짝 덜 세로 — 와이드한 영상 더 잘 보이게 */
 }
 .hero-photo-inner img,
 .hero-photo-inner video {
