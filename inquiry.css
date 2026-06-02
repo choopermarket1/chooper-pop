@@ -351,11 +351,21 @@
 .est-note {
   font-family: var(--kr);
   font-style: normal;
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: var(--champagne-soft);
-  opacity: .8;
   margin: 0;
   letter-spacing: 0.01em;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.est-note b { color: #fff; font-weight: 700; }
+
+/* 제출 버튼 disabled 시각화 */
+.inq-submit.disabled {
+  opacity: .4;
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
 }
 
 /* CONSENT */
