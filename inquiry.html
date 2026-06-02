@@ -30,12 +30,12 @@
   <div class="container">
     <div class="hero-presenting">
       <span class="gold-rule"></span>
-      <span><i>Coffret Dégustation</i> &nbsp;·&nbsp; 무료 시음</span>
+      <span><i>Sample Kit</i> &nbsp;·&nbsp; 무료 샘플 킷</span>
       <span class="gold-rule"></span>
     </div>
     <h1 class="hero-h1">
-      지금 시음을<br>
-      <em>해보세요.</em>
+      지금 샘플 킷을<br>
+      <em>받아보세요.</em>
     </h1>
     <p class="hero-sub">
       <i>Shine Rosé · Bubbly Sangria · Sunset Spritz</i><br>
@@ -47,10 +47,10 @@
 
 <!-- FORM -->
 <section class="inq-form-wrap">
-  <form class="inq-form" action="https://formsubmit.co/sweetyworld0404@gmail.com" method="POST">
+  <form class="inq-form" action="https://formsubmit.co/choopermarket1@gmail.com" method="POST">
 
     <!-- FormSubmit 메타 설정 -->
-    <input type="hidden" name="_subject" value="[Maison Chooper] B2B 시음 신청">
+    <input type="hidden" name="_subject" value="[Maison Chooper] B2B 샘플 킷 신청">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="https://localhost:3459/inquiry.html#thanks">
@@ -128,7 +128,7 @@
     <div class="fset">
       <span class="fset-num">III.</span>
       <h3 class="fset-h">예상 발주 물량 <span class="fset-sub"><i>La Commande</i></span></h3>
-      <p class="fset-help">대략으로 입력하셔도 됩니다. 즉시 자동 견적이 표시됩니다.</p>
+      <p class="fset-help"><b>전체 수량이 6병 단위로 발주 진행됩니다.</b> &nbsp;·&nbsp; 즉시 자동 견적이 표시됩니다.</p>
 
       <div class="qty-grid">
         <label class="qty-cell qty-rose">
@@ -214,7 +214,7 @@
 
     <!-- 제출 -->
     <button type="submit" class="btn-big inq-submit">
-      시음 신청하기 &nbsp;→
+      샘플 킷 신청하기 &nbsp;→
     </button>
 
   </form>
@@ -243,22 +243,39 @@
 </footer>
 
 <script>
-  // 자동 견적 · 상품별 단가는 data-price 속성에서 읽음
+  // 자동 견적 · 상품별 단가는 data-price 속성에서 읽음 · 6병 단위 발주 검증
   const qtyInputs = document.querySelectorAll('.qty-cell input[type="number"]');
   const out = document.querySelector('.est-val');
   const hiddenEst = document.querySelector('input[name="자동견적_원"]');
+  const estNote = document.querySelector('.est-note');
+  const baseNote = estNote ? estNote.textContent : '';
   function recalc() {
-    let sum = 0;
+    let sum = 0, totalQty = 0;
     qtyInputs.forEach(i => {
       const qty = parseInt(i.value, 10) || 0;
       const price = parseInt(i.dataset.price, 10) || 18000;
       sum += qty * price;
+      totalQty += qty;
     });
     const formatted = sum > 0 ? sum.toLocaleString('ko-KR') + ' 원' : '— 원';
     if (out) out.textContent = formatted;
     if (hiddenEst) hiddenEst.value = sum.toLocaleString('ko-KR') + ' 원';
+    // 6병 단위 안내
+    if (estNote) {
+      if (totalQty > 0 && totalQty % 6 !== 0) {
+        const next = Math.ceil(totalQty / 6) * 6;
+        estNote.innerHTML = `⚠ 총 ${totalQty}병 — <b>6병 단위 발주</b>이므로 ${next}병으로 조정해주세요. · 제출하시면 메일로 자동 견적이 송부됩니다.`;
+        estNote.style.color = '#E75532';
+      } else {
+        estNote.textContent = baseNote;
+        estNote.style.color = '';
+      }
+    }
   }
-  qtyInputs.forEach(i => i.addEventListener('input', recalc));
+  qtyInputs.forEach(i => {
+    i.setAttribute('step', '6');
+    i.addEventListener('input', recalc);
+  });
 </script>
 </body>
 </html>
