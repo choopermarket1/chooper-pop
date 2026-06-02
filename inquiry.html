@@ -91,7 +91,27 @@
         </label>
         <label>
           <span>지역</span>
-          <input type="text" name="지역" placeholder="시·도 / 구·군" />
+          <input type="text" name="지역" placeholder="시·도 / 구·군 (예: 서울 강남구)" />
+        </label>
+      </div>
+
+      <p class="fset-help addr-help">📦 <b>배송지 정보 — 정확히 입력 부탁드립니다.</b> 도착지 오류 방지를 위해 우편번호·동·호수까지 적어주세요.</p>
+
+      <div class="frow">
+        <label>
+          <span>우편번호 <i>*</i></span>
+          <input type="text" name="우편번호" placeholder="00000" pattern="[0-9]{5}" maxlength="5" required />
+        </label>
+        <label>
+          <span>기본주소 <i>*</i></span>
+          <input type="text" name="기본주소" placeholder="도로명 또는 지번 (예: 서울 강남구 테헤란로 123)" required />
+        </label>
+      </div>
+
+      <div class="frow">
+        <label class="frow-full">
+          <span>상세주소 <i>*</i></span>
+          <input type="text" name="상세주소" placeholder="건물명 · 층 · 호수 (예: ABC빌딩 5층 501호) — 누락 시 배송 지연 가능" required />
         </label>
       </div>
     </div>
@@ -243,12 +263,13 @@
 </footer>
 
 <script>
-  // 자동 견적 · 상품별 단가는 data-price 속성에서 읽음 · 6병 단위 발주 검증
+  // 자동 견적 · 각 카드 자유 입력 · 전체 합계만 6병 단위 검증
   const qtyInputs = document.querySelectorAll('.qty-cell input[type="number"]');
   const out = document.querySelector('.est-val');
   const hiddenEst = document.querySelector('input[name="자동견적_원"]');
   const estNote = document.querySelector('.est-note');
-  const baseNote = estNote ? estNote.textContent : '';
+  const submitBtn = document.querySelector('.inq-submit');
+  const baseNote = '제출하시면 메일로 자동 견적이 송부됩니다.';
   function recalc() {
     let sum = 0, totalQty = 0;
     qtyInputs.forEach(i => {
@@ -260,20 +281,28 @@
     const formatted = sum > 0 ? sum.toLocaleString('ko-KR') + ' 원' : '— 원';
     if (out) out.textContent = formatted;
     if (hiddenEst) hiddenEst.value = sum.toLocaleString('ko-KR') + ' 원';
-    // 6병 단위 안내
+    // 전체 총합 6병 단위 검증
     if (estNote) {
-      if (totalQty > 0 && totalQty % 6 !== 0) {
-        const next = Math.ceil(totalQty / 6) * 6;
-        estNote.innerHTML = `⚠ 총 ${totalQty}병 — <b>6병 단위 발주</b>이므로 ${next}병으로 조정해주세요. · 제출하시면 메일로 자동 견적이 송부됩니다.`;
-        estNote.style.color = '#E75532';
-      } else {
+      if (totalQty === 0) {
         estNote.textContent = baseNote;
         estNote.style.color = '';
+        if (submitBtn) submitBtn.disabled = false;
+      } else if (totalQty % 6 !== 0) {
+        const lower = Math.floor(totalQty / 6) * 6;
+        const upper = Math.ceil(totalQty / 6) * 6;
+        estNote.innerHTML = `⚠ 총 <b>${totalQty}병</b> — 발주는 <b>6병 단위</b>로 진행됩니다. <b>${lower}병</b> 또는 <b>${upper}병</b>으로 조정해주세요.`;
+        estNote.style.color = '#E75532';
+        if (submitBtn) submitBtn.disabled = true;
+      } else {
+        estNote.innerHTML = `✓ 총 <b>${totalQty}병</b> · ${baseNote}`;
+        estNote.style.color = '#157513';
+        if (submitBtn) submitBtn.disabled = false;
       }
     }
   }
   qtyInputs.forEach(i => {
-    i.setAttribute('step', '6');
+    i.setAttribute('step', '1');     /* 각 카드 자유 입력 */
+    i.setAttribute('min', '0');
     i.addEventListener('input', recalc);
   });
 </script>
